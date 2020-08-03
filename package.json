@@ -1,0 +1,26 @@
+{
+  "name": "server_side_javascript",
+  "version": "1.0.0",
+  "description": "Server side javascript tutorials",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ss1141204/server_side_javascript_tutorials.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ss1141204/server_side_javascript_tutorials/issues"
+  },
+  "homepage": "https://github.com/ss1141204/server_side_javascript_tutorials#readme",
+  "dependencies": {
+    "underscore": "^1.10.2"
+  } //내가 설치한 버전 즉 내 프로그램에 언제든 underscore 모듈 사용가
+  //이 프로그램이 반드시 필요하고 항상 따라다녀야 하는거면 디펜던시로 등록.
+  //요즘은 node 5.0.0 버전 이상부터는 --save 가 default 모드이기 때문에
+  //모듈 설치와 동시에 이루어진다고 함.
+}
+//npm init 할 시 생성됨
