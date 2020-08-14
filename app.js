@@ -5,6 +5,10 @@ var express = require('express'); //express 모듈 로드(사용하기)
 //express 모듈통해서 객체 생성
 var app = express(); //모듈은 사실 함수임 -> express는 이 형식으로 사용해야함
 
+//템플릿 엔진 사용
+app.set('view engine', 'jade'); //두번째인자에 적용
+app.set('views', './views');//두번째인자:템플릿이 있는 디렉토리 - 생략가능, 기본으로 퍋ㅈㄴdla
+
 app.use(express.static('public')); //**파일이 정적으로 위치할 dir 지정
 
 app.get('/', function(req, res){ //요청객체, 응답객체
@@ -50,4 +54,9 @@ app.get('/dynamic', function(req, res) {
     </body>
   </html>`;
   res.send(output);
+});
+
+//템플릿 라우터
+app.get('/template', function(req, res){
+  res.render('temp'); //temp라는 템플릿 파일(views/temp.jade)을 웹페이지로 랜더링해서 전송
 });
