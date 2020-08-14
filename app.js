@@ -27,3 +27,27 @@ app.listen(3000, function(){
 app.get('/route', function(req, res) {
   res.send('Hello Router, <img src="/route.png">');
 });
+
+app.get('/dynamic', function(req, res) {
+  var lis = '';
+  for(var i = 0; i < 5; i++){
+    lis = lis + '<li>coding</li>';
+  }
+  //현재시간 출력
+  var time = Date();
+  var output = `<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+    </head>
+    <body>
+        Hello, dynamic!
+        <ul>
+          ${lis}
+        </ul>
+        ${time} <!-- reLoad시 마다 변경됨 -->
+    </body>
+  </html>`;
+  res.send(output);
+});
