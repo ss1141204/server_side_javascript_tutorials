@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ss1141204/server_side_javascript_tutorials#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "underscore": "^1.10.2"
   }
 }
