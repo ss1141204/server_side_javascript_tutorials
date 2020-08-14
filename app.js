@@ -5,6 +5,8 @@ var express = require('express'); //express 모듈 로드(사용하기)
 //express 모듈통해서 객체 생성
 var app = express(); //모듈은 사실 함수임 -> express는 이 형식으로 사용해야함
 
+app.use(express.static('public')); //**파일이 정적으로 위치할 dir 지정
+
 app.get('/', function(req, res){ //요청객체, 응답객체
   res.send('Hello home page');//내장함수 , 해당 값을 응답
 });
@@ -21,3 +23,7 @@ app.listen(3000, function(){
 //get : "라우터" 라고 부름 -> 하는 일 : "라우팅"
 //라우트 : 길을 찾는다.
 //사용자 -> [라우터] get() -> [컨트롤러]send 익명함수 실행
+
+app.get('/route', function(req, res) {
+  res.send('Hello Router, <img src="/route.png">');
+});
